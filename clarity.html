@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarity - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-mark">RO</div>
+                <div>
+                    <span class="brand-name">REACH OUT</span>
+                    <span class="brand-tag">Clarity Course</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="#" onclick="logout(); return false;" class="logout-link">Logout</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="course-hero clarity-gradient">
+                <h1>Master Clarity</h1>
+                <p>Learn to think clearly and communicate with precision. Overcome confusion and find your focus.</p>
+            </section>
+
+            <section class="course-content">
+                <div class="course-sidebar">
+                    <div class="progress-widget">
+                        <h3>Your Progress</h3>
+                        <div class="progress-bar-large">
+                            <div class="progress-fill" id="clarityProgressBar" style="width: 0%"></div>
+                        </div>
+                        <p id="clarityProgressText">0% Complete</p>
+                    </div>
+
+                    <div class="lessons-list">
+                        <h3>Lessons</h3>
+                        <div class="lesson-item" onclick="completeLesson(1)">
+                            <span class="lesson-number">1</span>
+                            <div>
+                                <h4>Understanding Your Thoughts</h4>
+                                <p>Learn to identify confusion and mental fog</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-1">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(2)">
+                            <span class="lesson-number">2</span>
+                            <div>
+                                <h4>Structuring Your Ideas</h4>
+                                <p>Organize thoughts in a logical framework</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-2">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(3)">
+                            <span class="lesson-number">3</span>
+                            <div>
+                                <h4>Communicating Clearly</h4>
+                                <p>Express yourself with confidence and precision</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-3">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(4)">
+                            <span class="lesson-number">4</span>
+                            <div>
+                                <h4>Mastering Your Clarity</h4>
+                                <p>Advanced techniques for sustained focus</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-4">☐</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-main">
+                    <h2>Welcome to the Clarity Course</h2>
+                    <p>Clarity is the foundation of success. When your thinking is clear, your communication is powerful, and your decisions are confident. This course teaches you to cut through confusion and find your focus.</p>
+
+                    <div class="course-module">
+                        <h3>Why Clarity Matters</h3>
+                        <p>Many people struggle with unclear thinking, leading to:</p>
+                        <ul>
+                            <li>Missed opportunities and poor decisions</li>
+                            <li>Miscommunication and conflict</li>
+                            <li>Wasted time and energy</li>
+                            <li>Loss of confidence and purpose</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>What You'll Learn</h3>
+                        <ul>
+                            <li>Identify sources of confusion in your mind</li>
+                            <li>Structure thoughts logically</li>
+                            <li>Communicate ideas with power and precision</li>
+                            <li>Make decisions with confidence</li>
+                            <li>Help others achieve clarity</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>Your Journey</h3>
+                        <p>This is a self-paced course. Complete lessons in your own time and track your progress on your dashboard. Each lesson includes:</p>
+                        <ul>
+                            <li>Core concepts and frameworks</li>
+                            <li>Real-world examples</li>
+                            <li>Interactive exercises</li>
+                            <li>Action steps you can apply today</li>
+                        </ul>
+                    </div>
+
+                    <button class="button primary large" onclick="completeLesson(1)">Start First Lesson</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 REACH OUT. Master clarity, change your life.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="course.js"></script>
+    <script>
+        const courseId = 'clarity';
+        document.addEventListener('DOMContentLoaded', function() {
+            initCourse(courseId);
+        });
+    </script>
+</body>
+</html>

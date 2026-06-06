@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-mark">RO</div>
+                <div>
+                    <span class="brand-name">REACH OUT</span>
+                    <span class="brand-tag">Learning Dashboard</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="dashboard-hero">
+                <h1>Welcome back, <span id="userName"></span>!</h1>
+                <p>Track your learning progress and continue your journey to mastery</p>
+            </section>
+
+            <section class="dashboard-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="completedCourses">0</div>
+                    <div class="stat-label">Courses Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalProgress">0%</div>
+                    <div class="stat-label">Overall Progress</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="learningStreak">0</div>
+                    <div class="stat-label">Day Streak</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="totalTime">0h</div>
+                    <div class="stat-label">Time Spent Learning</div>
+                </div>
+            </section>
+
+            <section class="courses-section">
+                <h2>Your Learning Paths</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-header clarity-bg">
+                            <h3>Clarity</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Master clear thinking and communication.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="clarityProgress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text" id="clarityText">0%</span>
+                            <a href="clarity.html" class="button primary small">Continue Learning</a>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header confidence-bg">
+                            <h3>Confidence</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Build unstoppable self-assurance.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="confidenceProgress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text" id="confidenceText">0%</span>
+                            <a href="confidence.html" class="button primary small">Continue Learning</a>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header critical-thinking-bg">
+                            <h3>Critical Thinking</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Develop powerful analytical skills.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="criticalThinkingProgress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text" id="criticalThinkingText">0%</span>
+                            <a href="critical-thinking.html" class="button primary small">Continue Learning</a>
+                        </div>
+                    </div>
+
+                    <div class="course-card">
+                        <div class="course-header ai-coach-bg">
+                            <h3>AI Coach</h3>
+                        </div>
+                        <div class="course-body">
+                            <p>Get personalized guidance and support.</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="aiCoachProgress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text" id="aiCoachText">0%</span>
+                            <a href="ai-coach.html" class="button primary small">Continue Learning</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="progress-chart-section">
+                <h2>Learning Progress Overview</h2>
+                <div id="progressChart" class="progress-chart-container"></div>
+            </section>
+
+            <section class="recent-activity">
+                <h2>Recent Activity</h2>
+                <div id="activityFeed" class="activity-list">
+                    <p style="color: var(--muted);">No activity yet. Start learning now!</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 REACH OUT. Your learning journey starts here.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

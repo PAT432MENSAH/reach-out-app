@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confidence - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-mark">RO</div>
+                <div>
+                    <span class="brand-name">REACH OUT</span>
+                    <span class="brand-tag">Confidence Course</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="#" onclick="logout(); return false;" class="logout-link">Logout</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="course-hero confidence-gradient">
+                <h1>Build Confidence</h1>
+                <p>Overcome self-doubt and fear. Develop the self-assurance to pursue your dreams and inspire others.</p>
+            </section>
+
+            <section class="course-content">
+                <div class="course-sidebar">
+                    <div class="progress-widget">
+                        <h3>Your Progress</h3>
+                        <div class="progress-bar-large">
+                            <div class="progress-fill" id="confidenceProgressBar" style="width: 0%"></div>
+                        </div>
+                        <p id="confidenceProgressText">0% Complete</p>
+                    </div>
+
+                    <div class="lessons-list">
+                        <h3>Lessons</h3>
+                        <div class="lesson-item" onclick="completeLesson(1)">
+                            <span class="lesson-number">1</span>
+                            <div>
+                                <h4>Know Your Worth</h4>
+                                <p>Discover your unique strengths and value</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-1">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(2)">
+                            <span class="lesson-number">2</span>
+                            <div>
+                                <h4>Defeat Self-Doubt</h4>
+                                <p>Challenge limiting beliefs and fears</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-2">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(3)">
+                            <span class="lesson-number">3</span>
+                            <div>
+                                <h4>Present with Power</h4>
+                                <p>Speak and act with self-assurance</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-3">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(4)">
+                            <span class="lesson-number">4</span>
+                            <div>
+                                <h4>Lead Confidently</h4>
+                                <p>Inspire others and take charge</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-4">☐</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-main">
+                    <h2>Build Unshakeable Confidence</h2>
+                    <p>Confidence isn't something you're born with—it's something you build. This course teaches you to overcome fear, self-doubt, and insecurity to become the best version of yourself.</p>
+
+                    <div class="course-module">
+                        <h3>The Confidence Challenge</h3>
+                        <p>Many high-achievers struggle with:</p>
+                        <ul>
+                            <li>Imposter syndrome and self-doubt</li>
+                            <li>Fear of judgment or failure</li>
+                            <li>Difficulty speaking up or taking action</li>
+                            <li>Feeling like they're not good enough</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>What You'll Learn</h3>
+                        <ul>
+                            <li>Recognize and challenge self-limiting beliefs</li>
+                            <li>Build a strong sense of self-worth</li>
+                            <li>Handle criticism and setbacks</li>
+                            <li>Present yourself with power and presence</li>
+                            <li>Lead others with confidence</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>Your Transformation</h3>
+                        <p>By the end of this course, you will:</p>
+                        <ul>
+                            <li>Feel secure in your abilities</li>
+                            <li>Speak up without fear</li>
+                            <li>Take bold action toward your goals</li>
+                            <li>Inspire confidence in others</li>
+                        </ul>
+                    </div>
+
+                    <button class="button primary large" onclick="completeLesson(1)">Start First Lesson</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 REACH OUT. Build confidence, build your future.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="course.js"></script>
+    <script>
+        const courseId = 'confidence';
+        document.addEventListener('DOMContentLoaded', function() {
+            initCourse(courseId);
+        });
+    </script>
+</body>
+</html>

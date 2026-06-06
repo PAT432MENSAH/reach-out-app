@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-mark">RO</div>
+                <div>
+                    <span class="brand-name">REACH OUT</span>
+                    <span class="brand-tag">Blog & Stories</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Blog</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <article class="blog-post">
+                <div class="blog-post-hero" id="postImage"></div>
+
+                <div class="blog-post-content">
+                    <div class="blog-post-header">
+                        <div class="blog-post-meta">
+                            <span class="blog-category" id="postCategory"></span>
+                            <span class="blog-date" id="postDate"></span>
+                        </div>
+                        <h1 id="postTitle"></h1>
+                        <p class="blog-post-excerpt" id="postExcerpt"></p>
+                    </div>
+
+                    <div class="blog-post-body" id="postBody"></div>
+
+                    <div class="blog-post-footer">
+                        <a href="blog.html" class="button secondary">← Back to Blog</a>
+                        <div class="blog-tags" id="postTags"></div>
+                    </div>
+                </div>
+            </article>
+
+            <section class="related-posts">
+                <h2>Read Next</h2>
+                <div class="blog-grid-small" id="relatedPosts"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 REACH OUT. Read, learn, and grow.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script>
+        const blogPosts = {
+            1: {
+                title: 'How to Cut Through Mental Fog and Find Clarity',
+                category: 'Clarity',
+                date: 'June 6, 2026',
+                excerpt: 'Learn the practical steps to organize your thoughts and make clearer decisions in just 24 hours.',
+                image: 'linear-gradient(135deg, #7c3aed, #4f46e5)',
+                content: `
+                    <h2>Understanding Mental Fog</h2>
+                    <p>Mental fog is that cloudy feeling where you can't think clearly. It happens when your mind is overwhelmed with too much information, stress, or competing thoughts.</p>
+                    
+                    <h2>Step 1: Clear Your Mind</h2>
+                    <p>Start by writing down everything that's on your mind. Don't organize it yet—just get it out. This simple act of brain-dumping can provide immediate relief and clarity.</p>
+                    
+                    <h2>Step 2: Organize Your Thoughts</h2>
+                    <p>Group related ideas together. Identify what's urgent, what's important, and what can wait. This creates a mental framework that makes thinking easier.</p>
+                    
+                    <h2>Step 3: Take Action</h2>
+                    <p>With a clear mind, take one step toward your most important goal. Small actions create momentum and clarity.</p>
+                    
+                    <p>Try this today and notice how much clearer you feel by tomorrow.</p>
+                `,
+                tags: ['Clarity', 'Mindfulness', 'Focus']
+            },
+            2: {
+                title: 'Breaking Free from Imposter Syndrome',
+                category: 'Confidence',
+                date: 'June 5, 2026',
+                excerpt: 'Discover why you feel like a fraud and the simple mindset shift that changes everything.',
+                image: 'linear-gradient(135deg, #ec4899, #f43f5e)',
+                content: `
+                    <h2>What is Imposter Syndrome?</h2>
+                    <p>Imposter syndrome is the nagging feeling that you don't deserve your success, that you're a fraud, and that you'll eventually be exposed.</p>
+                    
+                    <h2>Why It Happens</h2>
+                    <p>High achievers often experience imposter syndrome because they set high standards for themselves. The more you accomplish, the more you see how much you still have to learn.</p>
+                    
+                    <h2>The Mindset Shift</h2>
+                    <p>Replace "I'm a fraud" with "I'm growing." Success is not about being perfect; it's about continuous improvement.</p>
+                    
+                    <h2>Action Steps</h2>
+                    <ul>
+                        <li>Celebrate your wins, no matter how small</li>
+                        <li>Keep evidence of your competence</li>
+                        <li>Help others and realize your value</li>
+                    </ul>
+                `,
+                tags: ['Confidence', 'Mindset', 'Personal Growth']
+            },
+            3: {
+                title: 'The Art of Asking Better Questions',
+                category: 'Critical Thinking',
+                date: 'June 4, 2026',
+                excerpt: 'Master the one skill that separates leaders from followers: asking the right questions.',
+                image: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+                content: `
+                    <h2>Questions Shape Thinking</h2>
+                    <p>The quality of your questions determines the quality of your thinking. Leaders ask better questions, which leads to better solutions.</p>
+                    
+                    <h2>Types of Powerful Questions</h2>
+                    <p><strong>Open-ended questions:</strong> "What if we approached this differently?"</p>
+                    <p><strong>Deep questions:</strong> "Why does this matter?"</p>
+                    <p><strong>Solution questions:</strong> "What's one small step we could take?"</p>
+                    
+                    <h2>Practice This Week</h2>
+                    <p>In every conversation, ask at least one question that goes deeper. Listen to the answer. Notice what opens up.</p>
+                `,
+                tags: ['Critical Thinking', 'Leadership', 'Communication']
+            },
+            4: {
+                title: 'Your Daily Habit for Unstoppable Progress',
+                category: 'Personal Growth',
+                date: 'June 3, 2026',
+                excerpt: 'The simple morning routine that ensures you never lose momentum on your goals.',
+                image: 'linear-gradient(135deg, #f59e0b, #d97706)',
+                content: `
+                    <h2>The Power of Daily Habits</h2>
+                    <p>Success is not about big dramatic gestures; it's about small consistent actions repeated daily.</p>
+                    
+                    <h2>The 3-Step Morning Routine</h2>
+                    <ol>
+                        <li><strong>Clarity:</strong> What's your one priority today?</li>
+                        <li><strong>Confidence:</strong> What's one thing you can do to build confidence?</li>
+                        <li><strong>Action:</strong> Do it first thing.</li>
+                    </ol>
+                    
+                    <h2>Why This Works</h2>
+                    <p>Starting your day with intention creates momentum. You move from reactive to proactive. Small wins compound into big results.</p>
+                    
+                    <h2>Try It Tomorrow</h2>
+                    <p>Set your alarm 15 minutes earlier. That's all the time you need.</p>
+                `,
+                tags: ['Habits', 'Productivity', 'Growth']
+            },
+            5: {
+                title: 'Fear is the Only Barrier Between You and Your Dreams',
+                category: 'Mindset',
+                date: 'June 2, 2026',
+                excerpt: 'Why fear is just a feeling, and how to move forward anyway.',
+                image: 'linear-gradient(135deg, #10b981, #059669)',
+                content: `
+                    <h2>Understanding Fear</h2>
+                    <p>Fear is your brain's way of protecting you from danger. But most fears today aren't about physical danger—they're about uncertainty and potential rejection.</p>
+                    
+                    <h2>The Truth About Fear</h2>
+                    <p>Fear is not a sign to stop. It's a sign that you're about to do something important. Every person who ever achieved something great had to move through fear.</p>
+                    
+                    <h2>How to Move Through Fear</h2>
+                    <ul>
+                        <li>Acknowledge the fear without judgment</li>
+                        <li>Ask: "What's the worst that could happen? Can I handle it?"</li>
+                        <li>Take one small action anyway</li>
+                    </ul>
+                    
+                    <p>Your dreams are waiting on the other side of fear.</p>
+                `,
+                tags: ['Mindset', 'Courage', 'Growth']
+            },
+            6: {
+                title: 'Speaking with Conviction: The Power of Your Words',
+                category: 'Communication',
+                date: 'June 1, 2026',
+                excerpt: 'Learn how to communicate with clarity, power, and impact.',
+                image: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+                content: `
+                    <h2>Words Have Power</h2>
+                    <p>Your words shape how others perceive you and what you believe about yourself. Speaking with conviction changes everything.</p>
+                    
+                    <h2>Elements of Powerful Speech</h2>
+                    <ul>
+                        <li><strong>Clarity:</strong> Know what you want to say</li>
+                        <li><strong>Conviction:</strong> Believe in your message</li>
+                        <li><strong>Connection:</strong> Speak to the listener's heart</li>
+                    </ul>
+                    
+                    <h2>Practice Speaking with Power</h2>
+                    <p>Eliminate filler words like "um" and "like". Pause instead. Speak more slowly. Make eye contact. Let your conviction show through.</p>
+                    
+                    <h2>The Result</h2>
+                    <p>People listen to you. They believe you. They follow you. This is the power of speaking with conviction.</p>
+                `,
+                tags: ['Communication', 'Speaking', 'Leadership']
+            }
+        };
+
+        function loadPost() {
+            const params = new URLSearchParams(window.location.search);
+            const postId = params.get('id') || '1';
+            const post = blogPosts[postId];
+
+            if (!post) {
+                document.querySelector('.blog-post-content').innerHTML = '<p>Post not found.</p>';
+                return;
+            }
+
+            document.getElementById('postTitle').textContent = post.title;
+            document.getElementById('postCategory').textContent = post.category;
+            document.getElementById('postDate').textContent = post.date;
+            document.getElementById('postExcerpt').textContent = post.excerpt;
+            document.getElementById('postImage').style.background = post.image;
+            document.getElementById('postBody').innerHTML = post.content;
+
+            // Tags
+            const tagsHtml = post.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            document.getElementById('postTags').innerHTML = tagsHtml;
+
+            // Related posts
+            const relatedIds = Object.keys(blogPosts).filter(id => id !== postId).slice(0, 3);
+            const relatedHtml = relatedIds.map(id => {
+                const p = blogPosts[id];
+                return `
+                    <div class="blog-card-small">
+                        <h3><a href="blog-detail.html?id=${id}">${p.title}</a></h3>
+                        <p>${p.excerpt}</p>
+                    </div>
+                `;
+            }).join('');
+            document.getElementById('relatedPosts').innerHTML = relatedHtml;
+        }
+
+        document.addEventListener('DOMContentLoaded', loadPost);
+    </script>
+</body>
+</html>

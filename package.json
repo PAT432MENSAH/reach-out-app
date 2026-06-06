@@ -1,0 +1,29 @@
+{
+  "name": "reach-out-app",
+  "version": "1.0.0",
+  "description": "REACH OUT - Communication mastery learning platform with authentication, courses, and progress tracking",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "npx http-server",
+    "test": "echo 'No tests configured'",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "learning",
+    "courses",
+    "communication",
+    "education",
+    "responsive"
+  ],
+  "author": "REACH OUT Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/reach-out-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/reach-out-app/issues"
+  },
+  "homepage": "https://reach-out-app.vercel.app"
+}

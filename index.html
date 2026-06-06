@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="brand">
+          <div class="brand-mark">RO</div>
+          <div>
+            <span class="brand-name">REACH OUT</span>
+            <span class="brand-tag">Communication Mastery</span>
+          </div>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="blog.html">Blog</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <span class="eyebrow">Welcome to Reach Out</span>
+            <h1>Communication mastery for every outreach team.</h1>
+            <p>Connect communities, share updates, and inspire action with a laptop-friendly experience built for modern outreach.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="dashboard.html">Get Started</a>
+              <a class="button secondary" href="#features">See Features</a>
+            </div>
+            <div class="hero-pill-grid">
+              <div class="pill">Laptops first</div>
+              <div class="pill">Simple onboarding</div>
+              <div class="pill">Live updates</div>
+            </div>
+          </div>
+          <div class="hero-slider">
+            <div class="slider-container">
+              <div class="slider-track" id="sliderTrack">
+                <div class="slider-image" style="background: linear-gradient(135deg, #7c3aed, #4f46e5);"></div>
+                <div class="slider-image" style="background: linear-gradient(135deg, #ec4899, #f43f5e);"></div>
+                <div class="slider-image" style="background: linear-gradient(135deg, #06b6d4, #0891b2);"></div>
+                <div class="slider-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></div>
+              </div>
+              <button class="slider-button prev" onclick="slideImage(-1)">❮</button>
+              <button class="slider-button next" onclick="slideImage(1)">❯</button>
+              <div class="slider-dots" id="sliderDots"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features" id="features">
+          <div class="section-heading">
+            <p class="section-eyebrow">Features</p>
+            <h2>Designed for outreach, clarity, and impact.</h2>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3>Clear communication</h3>
+              <p>Build messages that resonate with teams and communities.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Organized outreach</h3>
+              <p>Keep events, tasks, and conversations in one central place.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Responsive layout</h3>
+              <p>Looks great on laptops, desktops, and smaller screens.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="about-panel" id="about">
+          <div class="about-copy">
+            <p class="section-eyebrow">About Reach Out</p>
+            <h2>Bring people together with better outreach.</h2>
+            <p>Reach Out helps organizations and volunteers stay aligned through powerful communication, easy sharing, and a polished laptop-first interface.</p>
+            <ul>
+              <li>Build trust with consistent messaging.</li>
+              <li>Engage communities with clear calls-to-action.</li>
+              <li>Measure success with simple status updates.</li>
+            </ul>
+          </div>
+          <div class="about-visual"></div>
+        </section>
+
+        <section class="contact-panel" id="contact">
+          <div class="section-heading">
+            <p class="section-eyebrow">Contact</p>
+            <h2>Ready to make your outreach more effective?</h2>
+          </div>
+          <form class="contact-form">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="name@example.com" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Share your outreach goals"></textarea>
+            </label>
+            <button class="button primary" type="submit">Send Message</button>
+          </form>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 REACH OUT. Laptop-friendly outreach for modern teams.</p>
+      </footer>
+    </div>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

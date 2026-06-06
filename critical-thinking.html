@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Critical Thinking - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-mark">RO</div>
+                <div>
+                    <span class="brand-name">REACH OUT</span>
+                    <span class="brand-tag">Critical Thinking Course</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="#" onclick="logout(); return false;" class="logout-link">Logout</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="course-hero critical-thinking-gradient">
+                <h1>Master Critical Thinking</h1>
+                <p>Learn to analyze deeply, question wisely, and solve complex problems with precision and insight.</p>
+            </section>
+
+            <section class="course-content">
+                <div class="course-sidebar">
+                    <div class="progress-widget">
+                        <h3>Your Progress</h3>
+                        <div class="progress-bar-large">
+                            <div class="progress-fill" id="criticalThinkingProgressBar" style="width: 0%"></div>
+                        </div>
+                        <p id="criticalThinkingProgressText">0% Complete</p>
+                    </div>
+
+                    <div class="lessons-list">
+                        <h3>Lessons</h3>
+                        <div class="lesson-item" onclick="completeLesson(1)">
+                            <span class="lesson-number">1</span>
+                            <div>
+                                <h4>Question Everything</h4>
+                                <p>Develop a questioning mindset</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-1">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(2)">
+                            <span class="lesson-number">2</span>
+                            <div>
+                                <h4>Analyze Information</h4>
+                                <p>Evaluate sources and evidence</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-2">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(3)">
+                            <span class="lesson-number">3</span>
+                            <div>
+                                <h4>Logic and Reasoning</h4>
+                                <p>Build sound arguments</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-3">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(4)">
+                            <span class="lesson-number">4</span>
+                            <div>
+                                <h4>Problem Solving Mastery</h4>
+                                <p>Solve complex challenges strategically</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-4">☐</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-main">
+                    <h2>Develop Powerful Critical Thinking</h2>
+                    <p>In a world of information overload, critical thinking is your superpower. This course teaches you to cut through noise, analyze deeply, and make wise decisions.</p>
+
+                    <div class="course-module">
+                        <h3>Why Critical Thinking?</h3>
+                        <p>Without critical thinking, you:</p>
+                        <ul>
+                            <li>Believe misinformation and make poor decisions</li>
+                            <li>Get manipulated by others</li>
+                            <li>Struggle to solve complex problems</li>
+                            <li>Miss opportunities and connections</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>What You'll Master</h3>
+                        <ul>
+                            <li>Ask powerful questions that reveal truth</li>
+                            <li>Evaluate evidence and sources critically</li>
+                            <li>Identify logical fallacies and biases</li>
+                            <li>Build sound arguments</li>
+                            <li>Solve complex problems systematically</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>Real-World Impact</h3>
+                        <p>With critical thinking skills, you'll:</p>
+                        <ul>
+                            <li>Make better decisions in business and life</li>
+                            <li>Solve problems others can't</li>
+                            <li>Influence others with powerful reasoning</li>
+                            <li>Adapt quickly to changing circumstances</li>
+                        </ul>
+                    </div>
+
+                    <button class="button primary large" onclick="completeLesson(1)">Start First Lesson</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 REACH OUT. Think critically, live better.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="course.js"></script>
+    <script>
+        const courseId = 'criticalThinking';
+        document.addEventListener('DOMContentLoaded', function() {
+            initCourse(courseId);
+        });
+    </script>
+</body>
+</html>

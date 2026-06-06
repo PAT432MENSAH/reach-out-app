@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="brand-mark-small">RO</div>
+                <h1>Create account</h1>
+                <p>Join REACH OUT and start your journey</p>
+            </div>
+
+            <form id="signupForm" class="auth-form">
+                <label>
+                    Full Name
+                    <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </label>
+                <label>
+                    Email
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </label>
+                <label>
+                    Password
+                    <input type="password" id="password" name="password" placeholder="••••••••" required />
+                </label>
+                <label>
+                    Confirm Password
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required />
+                </label>
+                <button type="submit" class="button primary full-width">Create Account</button>
+            </form>
+
+            <p class="auth-footer">
+                Already have an account? <a href="login.html">Sign in</a>
+            </p>
+
+            <div id="authMessage" class="auth-message"></div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

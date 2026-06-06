@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Coach - REACH OUT</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <div class="brand">
+                <div class="brand-mark">RO</div>
+                <div>
+                    <span class="brand-name">REACH OUT</span>
+                    <span class="brand-tag">AI Coach</span>
+                </div>
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="#" onclick="logout(); return false;" class="logout-link">Logout</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <main>
+            <section class="course-hero ai-coach-gradient">
+                <h1>Your Personal AI Coach</h1>
+                <p>Get personalized guidance, accountability, and support 24/7 to overcome your fears and achieve your goals.</p>
+            </section>
+
+            <section class="course-content">
+                <div class="course-sidebar">
+                    <div class="progress-widget">
+                        <h3>Your Progress</h3>
+                        <div class="progress-bar-large">
+                            <div class="progress-fill" id="aiCoachProgressBar" style="width: 0%"></div>
+                        </div>
+                        <p id="aiCoachProgressText">0% Complete</p>
+                    </div>
+
+                    <div class="lessons-list">
+                        <h3>Sessions</h3>
+                        <div class="lesson-item" onclick="completeLesson(1)">
+                            <span class="lesson-number">1</span>
+                            <div>
+                                <h4>Get to Know Your Coach</h4>
+                                <p>Set up your personalized coaching</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-1">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(2)">
+                            <span class="lesson-number">2</span>
+                            <div>
+                                <h4>Define Your Goals</h4>
+                                <p>Create clarity on what you want</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-2">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(3)">
+                            <span class="lesson-number">3</span>
+                            <div>
+                                <h4>Overcome Your Fears</h4>
+                                <p>Address limiting beliefs</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-3">☐</span>
+                        </div>
+                        <div class="lesson-item" onclick="completeLesson(4)">
+                            <span class="lesson-number">4</span>
+                            <div>
+                                <h4>Action & Accountability</h4>
+                                <p>Track progress and celebrate wins</p>
+                            </div>
+                            <span class="lesson-check" id="lesson-4">☐</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-main">
+                    <h2>Your Personal Transformation Journey</h2>
+                    <p>The AI Coach is your dedicated guide to overcoming fear and achieving your full potential. It combines proven coaching techniques with AI intelligence to provide personalized support.</p>
+
+                    <div class="course-module">
+                        <h3>How It Works</h3>
+                        <p>The AI Coach provides:</p>
+                        <ul>
+                            <li>Personalized coaching based on your unique challenges</li>
+                            <li>Daily guidance and motivation</li>
+                            <li>Real-time feedback and accountability</li>
+                            <li>Customized action plans</li>
+                            <li>Progress tracking and celebration</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>What You'll Get</h3>
+                        <ul>
+                            <li>A clear understanding of your fears and blocks</li>
+                            <li>Proven strategies to overcome them</li>
+                            <li>An actionable roadmap to success</li>
+                            <li>Daily check-ins and encouragement</li>
+                            <li>Access to all learning resources</li>
+                        </ul>
+                    </div>
+
+                    <div class="course-module">
+                        <h3>Your Coaching Sessions</h3>
+                        <p>Each session includes:</p>
+                        <ul>
+                            <li>Personalized assessment of your progress</li>
+                            <li>Deep-dive into specific challenges</li>
+                            <li>New tools and techniques to try</li>
+                            <li>Accountability and encouragement</li>
+                        </ul>
+                    </div>
+
+                    <div class="ai-coach-chat">
+                        <h3>Chat with Your Coach</h3>
+                        <div class="chat-window" id="chatWindow">
+                            <div class="chat-message coach">
+                                <p>Hi! I'm your AI Coach. I'm here to help you overcome fear and unlock your potential. What's on your mind today?</p>
+                            </div>
+                        </div>
+                        <div class="chat-input-area">
+                            <input type="text" id="chatInput" placeholder="Type your message..." />
+                            <button onclick="sendMessage()" class="button primary small">Send</button>
+                        </div>
+                    </div>
+
+                    <button class="button primary large" onclick="completeLesson(1)">Start Your First Session</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© 2026 REACH OUT. Your AI Coach is always here.</p>
+        </footer>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="course.js"></script>
+    <script>
+        const courseId = 'aiCoach';
+        document.addEventListener('DOMContentLoaded', function() {
+            initCourse(courseId);
+        });
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+
+            if (!message) return;
+
+            const chatWindow = document.getElementById('chatWindow');
+
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message user';
+            userMsg.innerHTML = '<p>' + escapeHtml(message) + '</p>';
+            chatWindow.appendChild(userMsg);
+
+            input.value = '';
+
+            // Simulate coach response
+            setTimeout(() => {
+                const coachMsg = document.createElement('div');
+                coachMsg.className = 'chat-message coach';
+                const responses = [
+                    'That\'s a great insight. Tell me more about that.',
+                    'I hear you. How does that make you feel?',
+                    'That\'s a powerful observation. What would it take to overcome this?',
+                    'I\'m glad you\'re sharing this. You\'re already making progress.'
+                ];
+                coachMsg.innerHTML = '<p>' + responses[Math.floor(Math.random() * responses.length)] + '</p>';
+                chatWindow.appendChild(coachMsg);
+                chatWindow.scrollTop = chatWindow.scrollHeight;
+            }, 500);
+
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.getElementById('chatInput')?.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>
