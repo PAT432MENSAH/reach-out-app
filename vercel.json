@@ -3,7 +3,7 @@
   "buildCommand": "echo 'Static site - no build needed'",
   "framework": "static",
   "public": true,
-  "env": [],
+  "env": {},
   "regions": ["iad1"],
   "functions": {},
   "rewrites": [],
