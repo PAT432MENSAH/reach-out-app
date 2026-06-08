@@ -62,5 +62,33 @@ if (contactForm) {
 document.addEventListener('DOMContentLoaded', () => {
   initSlider();
   initAuthUI();
+  initFeatureCards();
 });
 
+function initFeatureCards() {
+  const cards = document.querySelectorAll('.feature-card');
+
+  cards.forEach(card => {
+    // Mouse-tracking for the ::before glow pseudo-element
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mouse-x', `${x}%`);
+      card.style.setProperty('--mouse-y', `${y}%`);
+    });
+
+    // Click to toggle active state
+    card.addEventListener('click', () => {
+      const wasActive = card.classList.contains('active');
+
+      // Remove active from all cards
+      cards.forEach(c => c.classList.remove('active'));
+
+      // Toggle this card (re-activate if it wasn't active)
+      if (!wasActive) {
+        card.classList.add('active');
+      }
+    });
+  });
+}

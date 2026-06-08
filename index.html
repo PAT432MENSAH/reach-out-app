@@ -33,6 +33,13 @@
 
       <main>
         <section class="hero" id="home">
+          <div class="hero-bg-carousel" id="heroBgCarousel">
+            <div class="hero-bg-slide active" style="background-image: url('image/pexels-ivan-s-4240505.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('image/pexels-pavel-danilyuk-8294824.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('image/pexels-onbab-7739825.jpg');"></div>
+            <div class="hero-bg-slide" style="background-image: url('image/pexels-laylow-4506159.jpg');"></div>
+          </div>
+          <div class="hero-overlay"></div>
           <div class="hero-copy">
             <span class="eyebrow">Welcome to Reach Out</span>
             <h1>Communication mastery for every outreach team.</h1>
@@ -49,12 +56,18 @@
           <div class="hero-slider">
             <div class="slider-container">
               <div class="slider-track" id="sliderTrack">
-                <div class="slider-image" style="background: linear-gradient(135deg, #7c3aed, #4f46e5);">
-                  <img src"" >
+                <div class="slider-image">
+                  <img src="image/pexels-fauxels-3228908.jpg" alt="Team collaboration" />
                 </div>
-                <div class="slider-image" style="background: linear-gradient(135deg, #ec4899, #f43f5e);"></div>
-                <div class="slider-image" style="background: linear-gradient(135deg, #06b6d4, #0891b2);"></div>
-                <div class="slider-image" style="background: linear-gradient(135deg, #f59e0b, #d97706);"></div>
+                <div class="slider-image">
+                  <img src="image/pexels-cottonbro-6208926.jpg" alt="Community outreach" />
+                </div>
+                <div class="slider-image">
+                  <img src="image/pexels-pixabay-221164.jpg" alt="Communication" />
+                </div>
+                <div class="slider-image">
+                  <img src="image/pexels-danykurstudio-12357432.jpg" alt="Outreach team" />
+                </div>
               </div>
               <button class="slider-button prev" onclick="slideImage(-1)">❮</button>
               <button class="slider-button next" onclick="slideImage(1)">❯</button>
@@ -69,17 +82,29 @@
             <h2>Designed for outreach, clarity, and impact.</h2>
           </div>
           <div class="feature-grid">
-            <article class="feature-card">
+            <article class="feature-card" data-feature="communication">
+              <div class="feature-image">
+                <img src="image/pexels-pixabay-221164.jpg" alt="Clear communication" loading="lazy" />
+              </div>
               <h3>Clear communication</h3>
               <p>Build messages that resonate with teams and communities.</p>
+              <span class="feature-cta">Learn more →</span>
             </article>
-            <article class="feature-card">
+            <article class="feature-card" data-feature="outreach">
+              <div class="feature-image">
+                <img src="image/pexels-fauxels-3228908.jpg" alt="Organized outreach" loading="lazy" />
+              </div>
               <h3>Organized outreach</h3>
               <p>Keep events, tasks, and conversations in one central place.</p>
+              <span class="feature-cta">Learn more →</span>
             </article>
-            <article class="feature-card">
+            <article class="feature-card" data-feature="responsive">
+              <div class="feature-image">
+                <img src="image/pexels-tara-winstead-8378735.jpg" alt="Responsive layout" loading="lazy" />
+              </div>
               <h3>Responsive layout</h3>
               <p>Looks great on laptops, desktops, and smaller screens.</p>
+              <span class="feature-cta">Learn more →</span>
             </article>
           </div>
         </section>
@@ -95,7 +120,17 @@
               <li>Measure success with simple status updates.</li>
             </ul>
           </div>
-          <div class="about-visual"></div>
+          <div class="about-visual">
+            <div class="about-gallery" id="aboutGallery">
+              <div class="about-gallery-track" id="aboutGalleryTrack">
+                <div class="about-gallery-slide">
+                  <video autoplay muted loop playsinline class="about-visual-video">
+        <source src="image/4769453-uhd_3840_2160_24fps.mp4" type="video/mp4">
+    </video>
+                </div>
+              <div class="about-gallery-dots" id="aboutGalleryDots"></div>
+            </div>
+          </div>
         </section>
 
         <section class="contact-panel" id="contact">
@@ -122,7 +157,7 @@
       </main>
 
       <footer class="site-footer">
-        <p>© 2026 REACH OUT. Laptop-friendly outreach for modern teams.</p>
+        <p>© 2026 REACH OUT. outreach for modern teams.</p>
       </footer>
     </div>
     <script src="auth.js"></script>
